@@ -1,0 +1,20 @@
+@import 'reset';
+
+@font-face {
+    font-family: "Avenir-Black";
+    src: url("/fonts/Avenir-Black.otf")format("otf")
+}
+$main_font:"Avenir-Black", sans-serif;
+$text_size: 26px;
+
+$blue : blue;
+$white: #ffffff;
+
+// Responsive
+$mobile: 600px;
+$tablette: 900px;
+$desktop: 1200px;
+
+@mixin mobile() { @media screen and (max-width:$mobile) { @content; } } 
+@mixin tablet() { @media screen and (max-width:$tablette) { @content; } } 
+@mixin sm_desktop() { @media screen and (max-width:$desktop) { @content; } }

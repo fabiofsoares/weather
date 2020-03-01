@@ -1,0 +1,53 @@
+@import '../utils/config.scss';
+
+.app-container {  
+    font-family: $main_font;
+    font-size: $text_size;    
+    color: $white;
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+    background: url("/img/img_rain.jpg") no-repeat center;
+    background-size: cover;
+    
+    padding: 40px;   
+
+    @include sm_desktop {
+        font-size: 22px;
+    }
+    @include tablet {
+        font-size: 18px;
+    }
+}
+
+.container-more {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.select-container {
+    text-align: center;
+    margin-top: 66px;
+    select {
+        width: 335px;
+        height: 68px;
+        border: none;
+        border-radius: 12px;
+        font-size: .93em;       
+        padding: 0 20px;
+        &.close {
+            background: #5074ad;
+        }
+
+        option {
+            padding: 0;
+            &.selected {
+                text-align: center;
+            }
+        }
+    }
+}

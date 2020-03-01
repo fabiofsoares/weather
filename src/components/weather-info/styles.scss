@@ -1,0 +1,25 @@
+.weather-component {  
+    flex: 1 1 25%;
+    .content {
+        max-width: 315px;
+        box-sizing: border-box;
+        padding: 50px 0;
+        text-align: center;
+        border-radius: 6px;
+        background: rgba(0,0,0,0.5);
+        .weather-info {
+            font-size: 1.15em;
+            line-height: 1.35em;
+
+            .text {
+                display: inline-block;
+                margin-left: 14px;
+            }
+        }
+        .component-title {
+            font-size: .7em;
+            line-height: 1.25em;
+        }
+    }
+    
+}
