@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import './styles.scss'
 
-export default class City extends Component { 
-    render(){
-        return (
-            <div className="city-corrent">
-                <div className="content">
-                    <div className="city-name">Paris</div>
-                    <div className="city-weather">7C</div>
-                </div>
+const City = (props) => {
+    return (
+        <div className="city-corrent">
+            <div className="content">
+                <div className="city-name">{props.name}</div>
+                <div className="city-weather">{props.weather}°C</div>
             </div>
-          );
-    }
+        </div>
+    )
 }
+
+export default City;

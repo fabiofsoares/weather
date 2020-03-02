@@ -14,19 +14,29 @@
     padding: 40px;   
 
     @include sm_desktop {
-        font-size: 22px;
+        font-size: 18px;
     }
     @include tablet {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    @include mobile {
+        font-size: 14px;
     }
 }
 
 .container-more {
-    border: 1px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    border: 1px solid red;    
     margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
 }
 
 .select-container {

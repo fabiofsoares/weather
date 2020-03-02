@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import './styles.scss'
 
-export default class Header extends Component { 
-    render(){
-        return (
-            <header className="header-component">              
-                <div className="content">
-                    <span className="app-name">Meteo</span>
-                    <div className="coordenations">(25, 48.6)</div>
-                </div>                              
-            </header>
-          );
-    }
+const Header = (props) => {
+    return (
+        <header className="header-component">              
+            <div className="content">
+                <span className="app-name">Meteo</span>
+                <div className="coordenations">({props.lon}, {props.lat})</div>
+            </div>                              
+        </header>
+    )
 }
+
+export default Header;
