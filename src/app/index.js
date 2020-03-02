@@ -4,15 +4,31 @@ import Header from '../components/header/'
 import City from '../components/city/'
 import Daily from '../components/daily'
 import WeatherInfo from '../components/weather-info'
-let data = {
-    coord:{lon:-0.13,lat:51.51}
-}
 
-export default class App extends Component { 
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            error: null,
+            isLoaded: true,
+            items: []
+        };
+    }
+    
+    componentWillMount() {
+        this._fetchWeather('Paris')
+    }
+    _fetchWeather(city){
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e42ca4b5c4de5ce5717d9e5bb5c1dc8f&units=metric&appid=b6907d289e10d714a6e88b30761fae22&lang=fr`).then(response => response.json())
+        .then(data => this.setState({ items: data, isLoaded: true }))
+        .catch(error => this.setState({ error, isLoaded: false }));
+    } 
     render(){
+        const { error, isLoaded, items } = this.state;        
         return (
+            
             <div className="app-container" >
-               <Header lon={ data.coord.lon } lat={data.coord.lat}/>
+              { isLoaded && <Header data={items.coord.lon} lon={ items.coord.lat } lat={ 4.2 }/> }
                <City name={'Paris'} weather={7}/>
                
                {/* Todo */}
