@@ -5,8 +5,8 @@ const City = (props) => {
     return (
         <div className="city-corrent">
             <div className="content">
-                <div className="city-name">{props.name}</div>
-                <div className="city-weather">{props.weather}°C</div>
+                <h2 className="city-name">{props.name}</h2>
+                <h3 className="city-weather">{props.weather}°C</h3>
             </div>
         </div>
     )

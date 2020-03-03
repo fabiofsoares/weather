@@ -1,14 +1,15 @@
 @import '../../utils/config.scss';
 
 .container-more {
-    border: 1px solid red;    
     margin-top: 55px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
+
     @include tablet {
         grid-template-columns: 1fr 1fr;
     }
+    
     @include mobile {
         grid-template-columns: 1fr;
     }

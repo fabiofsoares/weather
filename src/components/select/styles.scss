@@ -8,15 +8,15 @@
         border-radius: 12px;
         font-size: .93em;       
         padding: 0 20px;
+        text-transform: uppercase;
+        appearance: none;        
         &.close {
-            background: #5074ad;
+            background: url('/img/icons/down-arrow.svg') 95%/5% no-repeat, #5074ad; 
+            color: #fff;
         }
-
-        option {
-            padding: 0;
-            &.selected {
-                text-align: center;
-            }
-        }
+        &.open {
+            background: url('/img/icons/down-arrow.svg') 95%/5% no-repeat, #ffffff; 
+            color: #5074ad;
+        }        
     }
 }

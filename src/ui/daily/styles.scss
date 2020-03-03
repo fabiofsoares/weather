@@ -1,11 +1,22 @@
 .daily-forecast {  
-    border: 1px solid  green;
     margin-top: 40px;
+    
     .content {  
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-size: 1.15em;
-        line-height: 1.35em;       
+        line-height: 1.35em;
+        
+        .daily-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+            span {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
     }
 }

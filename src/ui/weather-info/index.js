@@ -5,17 +5,17 @@ const desc = [
     {
         mesure: 'km/h',
         label: 'Direction et vitesse du vent',
-        icon: 'pluie_fleche.svg'
+        icon: 'fleche.svg'
     },
     {
         mesure: 'hPa',
         label: 'Pression',
-        icon: 'pluie_fleche.svg'
+        icon: 'fleche_fleche.svg'
     },
     {
         mesure: 'mm',
         label: 'Humidite',
-        icon: 'pluie_fleche.svg'
+        icon: 'pluie.svg'
     },
     {
         mesure: '%',
@@ -38,7 +38,8 @@ const WeatherInfo = (props) => {
             break;
         case 'rain':
             i = 3;
-            break;  
+            break;
+        default :  
     }
 
     return(

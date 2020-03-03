@@ -5,27 +5,56 @@
     font-family: $main_font;
     font-size: $text_size;    
     color: $white;
-    padding: 40px;
     max-width: 1440px;
     margin: 0 auto;
 
-    background: url("/img/img_rain.jpg") no-repeat center;
-    background-size: cover;
-    
-     
-
     @include sm_desktop {
         font-size: 18px;
-        padding: 30px;
     }
     @include tablet {
         font-size: 16px;
-        padding: 20px;
     }
 
     @include mobile {
         font-size: 14px;
-        padding: 15px;
+    }
+
+    .app-content {
+        width: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        
+        &.Paris, &.Londres {
+            background: url("/img/img_rain.jpg") no-repeat center;
+            background-size: cover;
+        }
+        &.Bangkok {
+            background: url("/img/img_sun.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        @include sm_desktop {            
+            padding: 30px;
+        }
+
+        @include tablet {           
+            padding: 20px;
+        }
+    
+        @include mobile {           
+            padding: 15px;
+        }
+    }
+    .loader-content, .error-content {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .error-content span {
+        font-size: 2em;
+        color: #000000;
     }
 }
 
