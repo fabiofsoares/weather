@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './styles.scss'
 import Main from '../components/main'
 import Select from '../components/select'
-/* import StaticWeather from './json/weather.json' */
 
 export default class App extends Component {
     
