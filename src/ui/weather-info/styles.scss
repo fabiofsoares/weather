@@ -1,7 +1,6 @@
 @import '../../utils/config.scss';
 
 .weather-component {  
-    
     @include tablet { 
         justify-self: center;
         width: 100%;
@@ -49,5 +48,4 @@
             line-height: 1.25em;
         }
     }
-    
 }

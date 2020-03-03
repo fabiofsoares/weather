@@ -1,0 +1,22 @@
+.select-container {
+    text-align: center;
+    margin-top: 66px;
+    select {
+        width: 335px;
+        height: 68px;
+        border: none;
+        border-radius: 12px;
+        font-size: .93em;       
+        padding: 0 20px;
+        &.close {
+            background: #5074ad;
+        }
+
+        option {
+            padding: 0;
+            &.selected {
+                text-align: center;
+            }
+        }
+    }
+}

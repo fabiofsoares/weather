@@ -5,14 +5,14 @@
     font-family: $main_font;
     font-size: $text_size;    
     color: $white;
-
+    padding: 40px;
     max-width: 1440px;
     margin: 0 auto;
 
     background: url("/img/img_rain.jpg") no-repeat center;
     background-size: cover;
     
-    padding: 40px;   
+     
 
     @include sm_desktop {
         font-size: 18px;
@@ -29,39 +29,3 @@
     }
 }
 
-.container-more {
-    border: 1px solid red;    
-    margin-top: 55px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    @include tablet {
-        grid-template-columns: 1fr 1fr;
-    }
-    @include mobile {
-        grid-template-columns: 1fr;
-    }
-}
-
-.select-container {
-    text-align: center;
-    margin-top: 66px;
-    select {
-        width: 335px;
-        height: 68px;
-        border: none;
-        border-radius: 12px;
-        font-size: .93em;       
-        padding: 0 20px;
-        &.close {
-            background: #5074ad;
-        }
-
-        option {
-            padding: 0;
-            &.selected {
-                text-align: center;
-            }
-        }
-    }
-}
